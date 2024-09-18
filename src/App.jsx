@@ -159,6 +159,7 @@ const App = () => {
                     </div>
                     <input
                         type="date"
+                        placeholder="12.12.1980"
                         value={birthDate}
                         onChange={handleBirthDateChange}
                         className={`w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border shadow-sm rounded-lg ${getInputClass(birthDateValid)}`}
