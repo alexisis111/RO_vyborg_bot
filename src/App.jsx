@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTelegram } from "./hooks/useTelegram.js";
-
+import './App.css'
 const App = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [fullName, setFullName] = useState('');
