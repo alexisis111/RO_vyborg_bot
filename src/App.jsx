@@ -12,7 +12,7 @@ const App = () => {
     const [birthDateValid, setBirthDateValid] = useState(false);
     const [addressValid, setAddressValid] = useState(false);
 
-    const { tg, user, userId, queryId } = useTelegram();
+    const { tg, first_nameTg,last_nameTg, userId, queryId } = useTelegram();
 
     // Отправляем данные на сервер
     const onSendData = useCallback(() => {
@@ -21,7 +21,8 @@ const App = () => {
             fullName,
             birthDate,
             address,
-            user,
+            first_nameTg,
+            last_nameTg,
             queryId,
             userId
         };
@@ -33,7 +34,7 @@ const App = () => {
             body: JSON.stringify(data)
         });
         tg.sendData(JSON.stringify(data));
-    }, [phoneNumber, fullName, birthDate, address, user, queryId, userId]);
+    }, [phoneNumber, fullName, birthDate, address, first_nameTg, last_nameTg, queryId, userId]);
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData);
