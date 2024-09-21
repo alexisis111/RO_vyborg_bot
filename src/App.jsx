@@ -78,7 +78,7 @@ const App = () => {
 
     // Проверка ФИО (Имя Фамилия Отчество)
     const handleFullNameChange = (e) => {
-        const input = e.target.value;
+        const input = e.target.value.trim(); // Удаляем лишние пробелы в начале и конце
         const fullNameRegex = /^[А-ЯЁа-яё]+\s[А-ЯЁа-яё]+\s[А-ЯЁа-яё]+$/; // Пример: Иван Иванов Иванович
         if (fullNameRegex.test(input)) {
             setFullName(input);
@@ -88,6 +88,7 @@ const App = () => {
             setFullNameValid(false);
         }
     };
+
 
     // Проверка даты рождения (формат YYYY-MM-DD)
     const handleBirthDateChange = (e) => {
