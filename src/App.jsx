@@ -27,6 +27,7 @@ const App = () => {
             queryId,
             userId
         };
+
         fetch('https://80.78.243.142/web-data', {
             method: 'POST',
             headers: {
