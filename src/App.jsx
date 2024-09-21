@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useState } from 'react';
-import { useTelegram } from "./hooks/useTelegram.js";
+import {useCallback, useEffect, useState} from 'react';
+import {useTelegram} from "./hooks/useTelegram.js";
 import './App.css'
+
 const App = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [fullName, setFullName] = useState('');
@@ -12,7 +13,7 @@ const App = () => {
     const [birthDateValid, setBirthDateValid] = useState(false);
     const [addressValid, setAddressValid] = useState(false);
 
-    const { tg, first_nameTg,last_nameTg, userId, queryId } = useTelegram();
+    const {tg, first_nameTg, last_nameTg, userId, queryId} = useTelegram();
 
     // Отправляем данные на сервер
     const onSendData = useCallback(() => {
@@ -76,20 +77,15 @@ const App = () => {
         }
     };
 
-
     // Проверка ФИО (Имя Фамилия Отчество)
     const handleFullNameChange = (e) => {
-        const input = e.target.value.trim(); // Удаляем лишние пробелы в начале и конце
-        const fullNameRegex = /^[А-ЯЁа-яё]+\s[А-ЯЁа-яё]+\s[А-ЯЁа-яё]+$/; // Пример: Иван Иванов Иванович
-        if (fullNameRegex.test(input)) {
-            setFullName(input);
-            setFullNameValid(true);
-        } else {
-            setFullName(input);
-            setFullNameValid(false);
-        }
-    };
+        const input = e.target.value;
 
+        setFullNameValid(true);
+        setFullName(input);
+
+
+    };
 
     // Проверка даты рождения (формат YYYY-MM-DD)
     const handleBirthDateChange = (e) => {
@@ -129,7 +125,9 @@ const App = () => {
 
     return (
         <div className="flex flex-col items-start justify-start pt-10 px-4 space-y-4 max-w-md mx-auto">
-            <div className='font-bold text-center text-lg'>После заполнения данных, кнопка для отправки появится автоматически.</div>
+            <div className='font-bold text-center text-lg'>После заполнения данных, кнопка для отправки появится
+                автоматически.
+            </div>
             <label className="text-left w-full">
                 Введите ваше ФИО
                 <div className="relative">
