@@ -28,7 +28,7 @@ const App = () => {
             userId
         };
 
-        fetch('https://80.78.243.142/web-data', {
+        fetch('http://80.78.243.142/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
