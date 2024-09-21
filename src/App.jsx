@@ -28,7 +28,7 @@ const App = () => {
             userId
         };
 
-        fetch('http://80.78.243.142:3000/web-data', {
+        fetch('https://b6ab-80-78-243-142.ngrok-free.app/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
