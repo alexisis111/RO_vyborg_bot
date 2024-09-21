@@ -76,6 +76,7 @@ const App = () => {
         }
     };
 
+
     // Проверка ФИО (Имя Фамилия Отчество)
     const handleFullNameChange = (e) => {
         const input = e.target.value.trim(); // Удаляем лишние пробелы в начале и конце
