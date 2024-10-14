@@ -28,7 +28,7 @@ const App = () => {
             userId
         };
 
-        fetch('https://8215-80-78-243-142.ngrok-free.app/web-data', {
+        fetch('https://441d-80-78-243-142.ngrok-free.app/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -81,11 +81,8 @@ const App = () => {
     // Проверка ФИО (Имя Фамилия Отчество)
     const handleFullNameChange = (e) => {
         const input = e.target.value;
-
         setFullNameValid(true);
         setFullName(input);
-
-
     };
 
     // Проверка даты рождения (формат YYYY-MM-DD)
