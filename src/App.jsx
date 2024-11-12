@@ -185,7 +185,6 @@ const App = () => {
                     />
                 </div>
             </label>
-
             <label className="text-left w-full">
                 Введите номер телефона
                 <div className="relative">
