@@ -28,7 +28,7 @@ const App = () => {
             userId
         };
 
-        fetch('https://c7bd-80-78-243-142.ngrok-free.app/web-data', {
+        fetch('https://441d-80-78-243-142.ngrok-free.app/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -178,15 +178,16 @@ const App = () => {
                     </div>
                     <input
                         type="text"
-                        placeholder="Санкт-Петербург ул. Пушкина, д. 10"
+                        placeholder="Выборг ул. Пушкина, д. 10"
                         value={address}
                         onChange={handleAddressChange}
                         className={`w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border shadow-sm rounded-lg ${getInputClass(addressValid)}`}
                     />
                 </div>
             </label>
+
             <label className="text-left w-full">
-                Введите номер телефона
+                Введите ваш номер телефона
                 <div className="relative">
                     <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
