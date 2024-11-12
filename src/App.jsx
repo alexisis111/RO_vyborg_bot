@@ -127,7 +127,7 @@ const App = () => {
                 автоматически.
             </div>
             <label className="text-left w-full">
-                Введите ваше ФИО
+                Введите ФИО
                 <div className="relative">
                     <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
@@ -167,7 +167,7 @@ const App = () => {
             </label>
 
             <label className="text-left w-full">
-                Введите адрес проживания
+                Введите город и адрес проживания
                 <div className="relative">
                     <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
@@ -178,7 +178,7 @@ const App = () => {
                     </div>
                     <input
                         type="text"
-                        placeholder="ул. Пушкина, д. 10"
+                        placeholder="Санкт-Петербург ул. Пушкина, д. 10"
                         value={address}
                         onChange={handleAddressChange}
                         className={`w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border shadow-sm rounded-lg ${getInputClass(addressValid)}`}
@@ -187,7 +187,7 @@ const App = () => {
             </label>
 
             <label className="text-left w-full">
-                Введите ваш номер телефона
+                Введите номер телефона
                 <div className="relative">
                     <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
